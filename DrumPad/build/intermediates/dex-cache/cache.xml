@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="C:\Users\HyunMin\Desktop\capstone\version\DrumPad\libs\unity-classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="90edd05b777416e525a749e7974be784f1fd19a4">
+        <dex dex="C:\Users\HyunMin\Desktop\capstone\version\DrumPad\build\intermediates\transforms\dex\debug\folders\1000\2\unity-classes_0348aba5aa5e1053eb699a9216f555ca72571585\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\HyunMin\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\24.0.0-alpha2\support-annotations-24.0.0-alpha2.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="8071e1e6cd07e9253720313d6c14286a7ee424e0">
+        <dex dex="C:\Users\HyunMin\Desktop\capstone\version\DrumPad\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-24.0.0-alpha2_b95475419196783f19d5caeecc1b9da3219441e9\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\HyunMin\Desktop\capstone\version\DrumPad\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\24.0.0-alpha2\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="bf5aa3b026d5b5fd9f4ab5e8cf13499b9e016dfb">
+        <dex dex="C:\Users\HyunMin\Desktop\capstone\version\DrumPad\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-vector-drawable-24.0.0-alpha2_188ebebe89369ad60d4772c495718be1d3efe483\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\HyunMin\Desktop\capstone\version\DrumPad\build\intermediates\exploded-aar\com.android.support\appcompat-v7\24.0.0-alpha2\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="661a632c3b434991d6364690cbe0f786371101cc">
+        <dex dex="C:\Users\HyunMin\Desktop\capstone\version\DrumPad\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-appcompat-v7-24.0.0-alpha2_94510b42ca20ef0020c8ef9e9994d5a8913d52a0\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\HyunMin\Desktop\capstone\version\DrumPad\build\intermediates\exploded-aar\com.android.support\support-v4\24.0.0-alpha2\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="32ab8bede8cd600f25a5bb3fe15068c81c8910dc">
+        <dex dex="C:\Users\HyunMin\Desktop\capstone\version\DrumPad\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-v4-24.0.0-alpha2_b45bc654178f8474bce75f17da7f8a5b8ba86f9b\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\HyunMin\Desktop\capstone\version\DrumPad\build\intermediates\exploded-aar\com.android.support\support-v4\24.0.0-alpha2\jars\libs\internal_impl-24.0.0-alpha2.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="e460bc069dfd21d22770cf2a2370c9021b9c98a2">
+        <dex dex="C:\Users\HyunMin\Desktop\capstone\version\DrumPad\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.0.0-alpha2_7d394e1f0a0bb4099637a29f67f861952082f2e4\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\HyunMin\Desktop\capstone\version\DrumPad\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\24.0.0-alpha2\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="df7f6513d6e2aaa302bbac654807c6129b517090">
+        <dex dex="C:\Users\HyunMin\Desktop\capstone\version\DrumPad\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-animated-vector-drawable-24.0.0-alpha2_31a4b8364afe8adc7f6899402e594fc88bb6f3a8\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\HyunMin\Desktop\capstone\version\DrumPad\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="150f0bce8d4039c136a76bc35578b65ff973bd46">
+        <dex dex="C:\Users\HyunMin\Desktop\capstone\version\DrumPad\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_230494a1d1423081c4e6290398e4d4612dab4b08\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\HyunMin\Desktop\capstone\version\DrumPad\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="0e0583d86f31b4d4327ed92a82882d387e9336b3">
+        <dex dex="C:\Users\HyunMin\Desktop\capstone\version\DrumPad\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_ce671d7fc725342d02cc9671bdbdc840d28482f0\classes.dex" />
+    </item>
+
+</items>
