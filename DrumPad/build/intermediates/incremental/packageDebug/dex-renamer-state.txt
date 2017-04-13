@@ -1,7 +1,0 @@
-#Sun Apr 09 18:59:47 KST 2017
-base.0=C\:\\Users\\HyunMin\\Desktop\\capstone\\version\\DrumPad\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run_ce671d7fc725342d02cc9671bdbdc840d28482f0
-renamed.1=classes2.dex
-renamed.0=classes.dex
-file.1=C\:\\Users\\HyunMin\\Desktop\\capstone\\version\\DrumPad\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run-bootstrap_230494a1d1423081c4e6290398e4d4612dab4b08\\classes.dex
-base.1=C\:\\Users\\HyunMin\\Desktop\\capstone\\version\\DrumPad\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run-bootstrap_230494a1d1423081c4e6290398e4d4612dab4b08
-file.0=C\:\\Users\\HyunMin\\Desktop\\capstone\\version\\DrumPad\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run_ce671d7fc725342d02cc9671bdbdc840d28482f0\\classes.dex
