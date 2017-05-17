@@ -1,4 +1,4 @@
-package com.example.administrator.drumpad;
+package com.drum.pad.drumpad;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;

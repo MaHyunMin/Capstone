@@ -5,7 +5,7 @@ android {
     buildToolsVersion "23.0.2"
 
     defaultConfig {
-        applicationId "com.example.administrator.drumpad"
+        applicationId "com.drum.pad.drumpad"
         minSdkVersion 21
         targetSdkVersion 23
         versionCode 1

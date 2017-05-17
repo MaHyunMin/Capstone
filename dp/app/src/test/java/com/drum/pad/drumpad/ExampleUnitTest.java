@@ -1,4 +1,4 @@
-package com.example.administrator.drumpad;
+package com.drum.pad.drumpad;
 
 import org.junit.Test;
 

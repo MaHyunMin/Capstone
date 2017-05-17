@@ -8,19 +8,51 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.administrator.drumpad.MenuActivity"
+    android:background="@drawable/main_background"
+    tools:context="com.drum.pad.drumpad.MenuActivity"
     android:orientation="vertical">
 
     <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/button1"
-        android:text="pad"/>
+        android:id="@+id/button2"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:background="@drawable/main_button"
+        android:layout_above="@+id/button1"
+        android:text="Tutorial"
+        android:textSize="10pt"
+        android:textColor="#5D5D5D"
+        android:layout_marginLeft="80dp"
+        android:layout_marginTop="100dp"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="16dp" />
 
     <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/button2"
-        android:text="tutotial"/>
+        android:id="@+id/button1"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:background="@drawable/main_button"
+        android:layout_alignEnd="@+id/tutorial"
+        android:text="     play    "
+        android:textColor="#5D5D5D"
+        android:gravity="center"
+        android:textSize="10pt"
+        android:layout_marginLeft="80dp"
+        android:layout_marginTop="10dp"
+        tools:layout_editor_absoluteX="70dp"
+        tools:layout_editor_absoluteY="76dp" />
+
+    <Button
+        android:id="@+id/website"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:background="@drawable/main_button"
+        android:text=" Website "
+        android:textColor="#5D5D5D"
+        android:gravity="center"
+        android:textSize="10pt"
+        android:layout_marginLeft="80dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/button1"
+        android:layout_alignStart="@+id/button1" />
 
 </LinearLayout>
