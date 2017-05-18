@@ -18,7 +18,7 @@
 					ID <input type="text" name="id">
 					PW <input type="text" name="pw">
 					<input type="submit" name="login" value="로그인">
-					<input type="submit" name="member" value="회원가입">
+					<button type="button" name="member" onclick = "location.href = 'member.html'">회원가입</button>
 				</from>
 			</div>
 			<div class="menu">
@@ -35,8 +35,9 @@
 					<li class="bar">|</li>
 			</div>
 			<div class="board">
-				<figure>
-				</figure>
+				<input type = "button" name = "write" value = "게시글작성" align = "right">
+				<table width = 100% cellpadding = 0 >
+				</table>
 			</div>
 			<div class="footer">
 				바닥

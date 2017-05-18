@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>DrumPad Community</title>
+<link rel="stylesheet" href="community.css" type="text/css"/>
+</head>
+<body>
+	<div class="wrapper">
+		<div class="header1">
+			회원가입
+		</div>
+		<div class="header2">
+			<from name=form_login method=post>
+				ID <input type="text" name="id">
+				PW <input type="text" name="pw">
+				<input type="submit" name="login" value="로그인">
+				<input type="submit" name="member" value="회원가입">
+			</from>
+		</div>
+		<div class="menu">
+				<li class="bar">│</li>
+				<li class="menuLink"><a href="post.jsp">자유게시판</a></li>
+				<li class="bar">│</li>
+				<li class="menuLink"><a href="share.jsp">공유하기</a></li>
+				<li class="bar">│</li>
+				<li class="menuLink"><a href="#">자랑하기</a></li>
+				<li class="bar">│</li>
+				<li class="menuLink"><a href="notice.jsp">공지사항</a></li>
+				<li class="bar">│</li>
+		</div>
+		<div class="section">
+				<table border ="1">
+					<tr>
+						<th>아이디</th>
+						<td><input type = text name = ID></td>
+					</tr>
+					<tr>
+						<th>비밀번호</th>
+						<td><input type = password name = Password></td>
+					</tr>
+					<tr>
+						<th>비밀번호 확인</th>
+						<td><input type = password name = CheckPass></td>
+					</tr>
+					<tr>
+						<th>이름</th>
+						<td><input type = text name = Name></td>
+					</tr>
+					<tr>
+						<th>이메일</th>
+						<td><input type = email name = UserEmail></td>
+					</tr>
+					<tr>
+						<th>휴대폰</th>
+						<td><input type = tel name = Phone placeholder = "-을 제외하고 입력하시오."></td>
+					</tr>
+					<tr>
+						<th>성별</th>
+						<td colspan = 2 align = left>
+						<input type = radio name = Gender value = Male>남성
+						<input type = radio name = Gender value = Female>여성</td>
+					</tr>
+					<tr>
+						<td colspan = 2 align = center>
+						<input type = sumbit value = '확인'>
+						<button type = button onclick = "location.href = 'main.html':">취소</button></td>
+					</tr>
+				</table>
+		</div>
+		<div class="footer">
+			바닥
+		</div>
+	</div>
+
+</body>
+</html>

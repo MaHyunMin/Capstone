@@ -11,12 +11,11 @@
 			DrumPad Community
 		</div>
 		<div class="header2">
-			<from name=form_login method=post>
+				<from name=form_login method=post>
 				ID <input type="text" name="id">
 				PW <input type="text" name="pw">
-				<input type="submit" name="login" value="로그인">
-				<input type="submit" name="member" value="회원가입">
-			</from>
+				<input type="button" name="login" value="로그인" onclick = "location.href = 'Login.jsp'">
+				<button type="button" name="member" onclick = "location.href = 'member.html'">회원가입</button>
 		</div>
 		<div class="menu">
 				<li class="bar">│</li>
@@ -26,7 +25,7 @@
 				<li class="bar">│</li>
 				<li class="menuLink"><a href="#">자랑하기</a></li>
 				<li class="bar">│</li>
-				<li class="menuLink"><a href="#">공지사항</a></li>
+				<li class="menuLink"><a href="notice.jsp">공지사항</a></li>
 				<li class="bar">│</li>
 		</div>
 		<div class="board">
@@ -40,5 +39,6 @@
 			바닥
 		</div>
 	</div>
+</from>
 </body>
 </html>
