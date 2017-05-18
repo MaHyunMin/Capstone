@@ -9,7 +9,7 @@ import android.widget.Button;
 
 public class MenuActivity extends AppCompatActivity {
 
-    Button button1, button2;
+    Button button_Play, button_Tutorial, button_exit;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,10 +17,12 @@ public class MenuActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
 
-        button1 = (Button)findViewById(R.id.button1);
-        button2 = (Button)findViewById(R.id.button2);
+        button_Play = (Button)findViewById(R.id.btnPlay);
+        button_Tutorial = (Button)findViewById(R.id.btnTutorial);
+        button_exit = (Button)findViewById(R.id.btnExit);
 
-        button1.setOnClickListener(new View.OnClickListener() {
+        // 패드로 이동
+        button_Play.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MenuActivity.this, MainActivity.class);
@@ -28,14 +30,22 @@ public class MenuActivity extends AppCompatActivity {
             }
         });
 
-        button2.setOnClickListener(new View.OnClickListener() {
+        // 튜토리얼로 이동
+        button_Tutorial.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MenuActivity.this, UnityPlayerActivity.class);
                 startActivity(intent);
             }
         });
-    }
 
+        // 종료
+        button_exit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
+    }
 
 }

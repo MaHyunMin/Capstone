@@ -13,11 +13,11 @@
     android:orientation="vertical">
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/btnTutorial"
         android:layout_width="150dp"
         android:layout_height="50dp"
         android:background="@drawable/main_button"
-        android:layout_above="@+id/button1"
+        android:layout_above="@+id/btnPlay"
         android:text="Tutorial"
         android:textSize="10pt"
         android:textColor="#5D5D5D"
@@ -27,11 +27,11 @@
         tools:layout_editor_absoluteY="16dp" />
 
     <Button
-        android:id="@+id/button1"
+        android:id="@+id/btnPlay"
         android:layout_width="150dp"
         android:layout_height="50dp"
         android:background="@drawable/main_button"
-        android:layout_alignEnd="@+id/tutorial"
+        android:layout_alignEnd="@+id/btnTutorial"
         android:text="     play    "
         android:textColor="#5D5D5D"
         android:gravity="center"
@@ -42,17 +42,17 @@
         tools:layout_editor_absoluteY="76dp" />
 
     <Button
-        android:id="@+id/website"
+        android:id="@+id/btnExit"
         android:layout_width="150dp"
         android:layout_height="50dp"
         android:background="@drawable/main_button"
-        android:text=" Website "
+        android:text=" Exit "
         android:textColor="#5D5D5D"
         android:gravity="center"
         android:textSize="10pt"
         android:layout_marginLeft="80dp"
         android:layout_marginTop="10dp"
-        android:layout_below="@+id/button1"
-        android:layout_alignStart="@+id/button1" />
+        android:layout_below="@+id/btnTutorial"
+        android:layout_alignStart="@+id/btnTutorial" />
 
 </LinearLayout>

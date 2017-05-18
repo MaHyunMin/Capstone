@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:id="@+id/action_musiclist"
+        android:icon="@drawable/ic_musiclist_24dp"
+        android:title="musiclist"
+        app:showAsAction="always" />
+
+    <item android:id="@+id/action_stop"
+        android:icon="@drawable/ic_stop_24dp"
+        android:title="stop"
+        app:showAsAction="always" />
+
+    <item android:id="@+id/action_record"
+        android:icon="@drawable/ic_record_24dp"
+        android:title="record"
+        app:showAsAction="always" />
+
+    <item android:id="@+id/action_save"
+        android:icon="@drawable/ic_save_24dp"
+        android:title="save"
+        app:showAsAction="always" />
+
+    <item android:id="@+id/action_recordlist"
+        android:icon="@drawable/ic_recordlist_24dp"
+        android:title="recordlist"
+        app:showAsAction="always" />
+
+</menu>

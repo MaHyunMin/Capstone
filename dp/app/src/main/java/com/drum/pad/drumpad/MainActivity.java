@@ -10,8 +10,8 @@ import android.view.View;
 
 public class MainActivity extends ActionBarActivity{
     // 뒤로가기버튼 누른시간
-    private long backpresstime = 0;
-    boolean ispad = true;
+    //private long backpresstime = 0;
+    //boolean ispad = true;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -76,7 +76,7 @@ public class MainActivity extends ActionBarActivity{
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
+        getMenuInflater().inflate(R.menu.actionbar_menu, menu);
         return true;
     }
 }
