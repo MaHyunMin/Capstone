@@ -17,7 +17,7 @@
 					ID <input type="text" name="id">
 					PW <input type="text" name="pw">
 					<input type="submit" name="login" value="로그인">
-					<input type="submit" name="member" value="회원가입">
+					<button type="button" name="member" onclick = "location.href = 'member.html'">회원가입</button>
 				</from>
 			</div>
 			<div class="menu">

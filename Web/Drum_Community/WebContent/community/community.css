@@ -95,6 +95,14 @@ body{
   animation : 20s slide ease-in-out infinite; 
 }
 
+.board text{
+	position : relative;
+	width: 300%;
+	margin: 0;
+	top: 0;
+	left: 0;
+}
+
 .footer{
 	background-color : #FFBB00;
 	clear : both;
