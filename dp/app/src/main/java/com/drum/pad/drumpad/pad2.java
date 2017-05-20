@@ -72,7 +72,7 @@ public class pad2 extends Fragment{
                     pool.play(chant1, 1, 1, 0, 0, 1);
 
                     // 버튼 이미지를 눌린 이미지로 변경
-                    button.setBackgroundResource(R.drawable.button_press2);
+                    button.setBackgroundResource(R.drawable.button2_press);
                 }
                 // 버튼을 땟을 때
                 else if(action == MotionEvent.ACTION_UP){
@@ -98,7 +98,7 @@ public class pad2 extends Fragment{
                     pool.play(chant2, 1, 1, 0, 0, 1);
 
                     // 버튼 이미지를 눌린 이미지로 변경
-                    button.setBackgroundResource(R.drawable.button_press2);
+                    button.setBackgroundResource(R.drawable.button2_press);
                 }
                 // 버튼을 땟을 때
                 else if(action == MotionEvent.ACTION_UP){
@@ -124,7 +124,7 @@ public class pad2 extends Fragment{
                     pool.play(clap1, 1, 1, 0, 0, 1);
 
                     // 버튼 이미지를 눌린 이미지로 변경
-                    button.setBackgroundResource(R.drawable.button_press2);
+                    button.setBackgroundResource(R.drawable.button2_press);
                 }
                 // 버튼을 땟을 때
                 else if (action == MotionEvent.ACTION_UP) {
@@ -150,7 +150,7 @@ public class pad2 extends Fragment{
                     pool.play(click1, 1, 1, 0, 0, 1);
 
                     // 버튼 이미지를 눌린 이미지로 변경
-                    button.setBackgroundResource(R.drawable.button_press2);
+                    button.setBackgroundResource(R.drawable.button2_press);
                 }
                 // 버튼을 땟을 때
                 else if (action == MotionEvent.ACTION_UP) {
@@ -176,7 +176,7 @@ public class pad2 extends Fragment{
                     pool.play(click2, 1, 1, 0, 0, 1);
 
                     // 버튼 이미지를 눌린 이미지로 변경
-                    button.setBackgroundResource(R.drawable.button_press2);
+                    button.setBackgroundResource(R.drawable.button2_press);
                 }
                 // 버튼을 땟을 때
                 else if (action == MotionEvent.ACTION_UP) {
@@ -202,7 +202,7 @@ public class pad2 extends Fragment{
                     pool.play(crash1, 1, 1, 0, 0, 1);
 
                     // 버튼 이미지를 눌린 이미지로 변경
-                    button.setBackgroundResource(R.drawable.button_press2);
+                    button.setBackgroundResource(R.drawable.button2_press);
                 }
                 // 버튼을 땟을 때
                 else if(action == MotionEvent.ACTION_UP){
@@ -228,7 +228,7 @@ public class pad2 extends Fragment{
                     pool.play(kick1, 1, 1, 0, 0, 1);
 
                     // 버튼 이미지를 눌린 이미지로 변경
-                    button.setBackgroundResource(R.drawable.button_press2);
+                    button.setBackgroundResource(R.drawable.button2_press);
                 }
                 // 버튼을 땟을 때
                 else if (action == MotionEvent.ACTION_UP) {
@@ -254,7 +254,7 @@ public class pad2 extends Fragment{
                     pool.play(kick2, 1, 1, 0, 0, 1);
 
                     // 버튼 이미지를 눌린 이미지로 변경
-                    button.setBackgroundResource(R.drawable.button_press2);
+                    button.setBackgroundResource(R.drawable.button2_press);
                 }
                 // 버튼을 땟을 때
                 else if (action == MotionEvent.ACTION_UP) {
@@ -280,7 +280,7 @@ public class pad2 extends Fragment{
                     pool.play(openhihat1, 1, 1, 0, 0, 1);
 
                     // 버튼 이미지를 눌린 이미지로 변경
-                    button.setBackgroundResource(R.drawable.button_press2);
+                    button.setBackgroundResource(R.drawable.button2_press);
                 }
                 // 버튼을 땟을 때
                 else if (action == MotionEvent.ACTION_UP) {
@@ -306,7 +306,7 @@ public class pad2 extends Fragment{
                     pool.play(snare1, 1, 1, 0, 0, 1);
 
                     // 버튼 이미지를 눌린 이미지로 변경
-                    button.setBackgroundResource(R.drawable.button_press2);
+                    button.setBackgroundResource(R.drawable.button2_press);
                 }
                 // 버튼을 땟을 때
                 else if (action == MotionEvent.ACTION_UP) {
@@ -332,7 +332,7 @@ public class pad2 extends Fragment{
                     pool.play(snare2, 1, 1, 0, 0, 1);
 
                     // 버튼 이미지를 눌린 이미지로 변경
-                    button.setBackgroundResource(R.drawable.button_press2);
+                    button.setBackgroundResource(R.drawable.button2_press);
                 }
                 // 버튼을 땟을 때
                 else if (action == MotionEvent.ACTION_UP) {
@@ -358,7 +358,7 @@ public class pad2 extends Fragment{
                     pool.play(snare3, 1, 1, 0, 0, 1);
 
                     // 버튼 이미지를 눌린 이미지로 변경
-                    button.setBackgroundResource(R.drawable.button_press2);
+                    button.setBackgroundResource(R.drawable.button2_press);
                 }
                 // 버튼을 땟을 때
                 else if (action == MotionEvent.ACTION_UP) {
@@ -385,7 +385,7 @@ public class pad2 extends Fragment{
                     pool.play(loop1, 1, 1, 0, isloop, 1);
 
                     // 버튼 이미지를 눌린 이미지로 변경
-                    button.setBackgroundResource(R.drawable.button_press2);
+                    button.setBackgroundResource(R.drawable.button2_press);
                 }
                 // 버튼을 땟을 때
                 else if (action == MotionEvent.ACTION_UP) {
@@ -412,7 +412,7 @@ public class pad2 extends Fragment{
                     pool.play(loop2, 1, 1, 0, isloop, 1);
 
                     // 버튼 이미지를 눌린 이미지로 변경
-                    button.setBackgroundResource(R.drawable.button_press2);
+                    button.setBackgroundResource(R.drawable.button2_press);
                 }
                 // 버튼을 땟을 때
                 else if (action == MotionEvent.ACTION_UP) {
@@ -439,7 +439,7 @@ public class pad2 extends Fragment{
                     pool.play(loop3, 1, 1, 0, isloop, 1);
 
                     // 버튼 이미지를 눌린 이미지로 변경
-                    button.setBackgroundResource(R.drawable.button_press2);
+                    button.setBackgroundResource(R.drawable.button2_press);
                 }
                 // 버튼을 땟을 때
                 else if (action == MotionEvent.ACTION_UP) {
@@ -466,7 +466,7 @@ public class pad2 extends Fragment{
                     pool.play(loop4, 1, 1, 0, 0, 1);
 
                     // 버튼 이미지를 눌린 이미지로 변경
-                    button.setBackgroundResource(R.drawable.button_press2);
+                    button.setBackgroundResource(R.drawable.button2_press);
                 }
                 // 버튼을 땟을 때
                 else if (action == MotionEvent.ACTION_UP) {

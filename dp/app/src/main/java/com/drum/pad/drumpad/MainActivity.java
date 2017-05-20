@@ -1,9 +1,11 @@
 package com.drum.pad.drumpad;
 
+import android.app.AlertDialog;
 import android.app.Fragment;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.content.DialogInterface;
+import android.graphics.drawable.ColorDrawable;
 import android.media.MediaPlayer;
 import android.media.MediaRecorder;
 import android.os.Bundle;
@@ -14,8 +16,10 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Toast;
-import android.app.AlertDialog;
+
+import com.bumptech.glide.Glide;
 
 import java.io.File;
 import java.io.IOException;
@@ -30,12 +34,15 @@ public class MainActivity extends ActionBarActivity{
     MediaRecorder mRecorder = null;
     String mFilePath, mMusicPath;
     Menu action_menu;
+    ImageView pad1, pad2, pad3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        getSupportActionBar().setBackgroundDrawable(new ColorDrawable(0xFF353535));
+        getSupportActionBar().setDisplayShowTitleEnabled(false); // 액션바 타이틀 제거
+        //getSupportActionBar().setDisplayShowHomeEnabled(false);
         setfilepath();
 
         if(findViewById(R.id.pad_area) != null){
@@ -47,13 +54,55 @@ public class MainActivity extends ActionBarActivity{
 
             getFragmentManager().beginTransaction().add(R.id.pad_area, p1).commit();
         }
-    }
 
+        pad1 = (ImageView)findViewById(R.id.frag1Button);
+        pad2 = (ImageView)findViewById(R.id.frag2Button);
+        pad3 = (ImageView)findViewById(R.id.frag3Button);
+
+        // 이미지 로딩속도 빠르게하기 위한코드
+        // buiild.gardle dependencies에 compile 'com.github.bumptech.glide:glide:3.7.0' 등록
+        Glide.with(this).load(R.drawable.frag_button1).into(pad1);
+        Glide.with(this).load(R.drawable.frag_button2).into(pad2);
+        Glide.with(this).load(R.drawable.frag_button3).into(pad3);
+
+        pad1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Fragment fr_pad = new pad1();
+                FragmentManager fm = getFragmentManager();
+                FragmentTransaction fragmentTransaction = fm.beginTransaction();
+                fragmentTransaction.replace(R.id.pad_area, fr_pad);
+                fragmentTransaction.commit();
+            }
+        });
+
+        pad2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Fragment fr_pad = new pad2();
+                FragmentManager fm = getFragmentManager();
+                FragmentTransaction fragmentTransaction = fm.beginTransaction();
+                fragmentTransaction.replace(R.id.pad_area, fr_pad);
+                fragmentTransaction.commit();
+            }
+        });
+
+        pad3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Fragment fr_pad = new pad3();
+                FragmentManager fm = getFragmentManager();
+                FragmentTransaction fragmentTransaction = fm.beginTransaction();
+                fragmentTransaction.replace(R.id.pad_area, fr_pad);
+                fragmentTransaction.commit();
+            }
+        });
+    }
+/*
     // 1 2 3 버튼에 따라 드럼패드(프래그먼트) 전환
     // 화면 전환 추가
     public void selectFragment(View view){
         Fragment fr_pad = null;
-        Fragment fr_menu = null;
 
         switch(view.getId()){
             case R.id.frag1Button:
@@ -75,7 +124,7 @@ public class MainActivity extends ActionBarActivity{
         //fragmentTransaction.addToBackStack(null); // 주석 풀면 뒤로가기 누를 시 이전 프레그먼트 나옴
         fragmentTransaction.commit();
     }
-
+*/
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.actionbar_menu, menu);
