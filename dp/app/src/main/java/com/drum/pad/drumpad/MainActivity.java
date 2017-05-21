@@ -8,6 +8,7 @@ import android.content.DialogInterface;
 import android.graphics.drawable.ColorDrawable;
 import android.media.MediaPlayer;
 import android.media.MediaRecorder;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
 import android.support.v7.app.ActionBarActivity;
@@ -65,6 +66,7 @@ public class MainActivity extends ActionBarActivity{
         Glide.with(this).load(R.drawable.frag_button2).into(pad2);
         Glide.with(this).load(R.drawable.frag_button3).into(pad3);
 
+        // 패드전환 코드 수정
         pad1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -129,11 +131,9 @@ public class MainActivity extends ActionBarActivity{
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.actionbar_menu, menu);
         action_menu = menu;
-        action_menu.findItem(R.id.action_musiclist).setEnabled(true);
-        action_menu.findItem(R.id.action_recordlist).setEnabled(true);
         action_menu.findItem(R.id.action_record).setEnabled(true);
         action_menu.findItem(R.id.action_save).setEnabled(false);
-        action_menu.findItem(R.id.action_stop).setEnabled(false);
+        action_menu.findItem(R.id.action_stop).setEnabled(true);
         return true;
     }
 
@@ -143,8 +143,6 @@ public class MainActivity extends ActionBarActivity{
         switch (id){
             case R.id.action_musiclist:
                 musicList();
-                action_menu.findItem(R.id.action_musiclist).setEnabled(true);
-                action_menu.findItem(R.id.action_recordlist).setEnabled(true);
                 action_menu.findItem(R.id.action_record).setEnabled(true);
                 action_menu.findItem(R.id.action_save).setEnabled(false);
                 action_menu.findItem(R.id.action_stop).setEnabled(true);
@@ -152,8 +150,6 @@ public class MainActivity extends ActionBarActivity{
 
             case R.id.action_stop:
                 stopMusic();
-                action_menu.findItem(R.id.action_musiclist).setEnabled(true);
-                action_menu.findItem(R.id.action_recordlist).setEnabled(true);
                 action_menu.findItem(R.id.action_record).setEnabled(true);
                 action_menu.findItem(R.id.action_save).setEnabled(false);
                 action_menu.findItem(R.id.action_stop).setEnabled(false);
@@ -161,8 +157,6 @@ public class MainActivity extends ActionBarActivity{
 
             case R.id.action_record:
                 startRecording();
-                action_menu.findItem(R.id.action_musiclist).setEnabled(true);
-                action_menu.findItem(R.id.action_recordlist).setEnabled(true);
                 action_menu.findItem(R.id.action_record).setEnabled(false);
                 action_menu.findItem(R.id.action_save).setEnabled(true);
                 action_menu.findItem(R.id.action_stop).setEnabled(false);
@@ -170,8 +164,6 @@ public class MainActivity extends ActionBarActivity{
 
             case R.id.action_recordlist:
                 recordList();
-                action_menu.findItem(R.id.action_musiclist).setEnabled(true);
-                action_menu.findItem(R.id.action_recordlist).setEnabled(true);
                 action_menu.findItem(R.id.action_record).setEnabled(true);
                 action_menu.findItem(R.id.action_save).setEnabled(false);
                 action_menu.findItem(R.id.action_stop).setEnabled(true);
@@ -179,8 +171,6 @@ public class MainActivity extends ActionBarActivity{
 
             case R.id.action_save:
                 stopRecording();
-                action_menu.findItem(R.id.action_musiclist).setEnabled(true);
-                action_menu.findItem(R.id.action_recordlist).setEnabled(true);
                 action_menu.findItem(R.id.action_record).setEnabled(true);
                 action_menu.findItem(R.id.action_save).setEnabled(false);
                 action_menu.findItem(R.id.action_stop).setEnabled(false);
@@ -207,9 +197,24 @@ public class MainActivity extends ActionBarActivity{
         }
         mRecorder = new MediaRecorder();
         mRecorder.setAudioSource(MediaRecorder.AudioSource.MIC);
-        mRecorder.setOutputFormat(MediaRecorder.OutputFormat.MPEG_4);
-        mRecorder.setAudioEncoder(MediaRecorder.AudioEncoder.AMR_NB);
+        //mRecorder.setOutputFormat(MediaRecorder.OutputFormat.MPEG_4);
+        //mRecorder.setAudioEncoder(MediaRecorder.AudioEncoder.AMR_NB);
+        //mRecorder.setOutputFile(mFilePath + "/" + default_filename);
+
+        // 음질 개선 코드
+        if(Build.VERSION.SDK_INT >= 10){
+            mRecorder.setAudioSamplingRate(44100);
+            mRecorder.setAudioEncodingBitRate(96000);
+            mRecorder.setOutputFormat(MediaRecorder.OutputFormat.MPEG_4);
+            mRecorder.setAudioEncoder(MediaRecorder.AudioEncoder.AAC);
+        }else{
+            mRecorder.setAudioSamplingRate(8000);
+            mRecorder.setAudioEncodingBitRate(12200);
+            mRecorder.setOutputFormat(MediaRecorder.OutputFormat.THREE_GPP);
+            mRecorder.setAudioEncoder(MediaRecorder.AudioEncoder.AMR_NB);
+        }
         mRecorder.setOutputFile(mFilePath + "/" + default_filename);
+        mRecorder.setMaxDuration(20000);
 
         try{
             mRecorder.prepare();
@@ -264,7 +269,7 @@ public class MainActivity extends ActionBarActivity{
     }
 
     private void stopMusic(){
-        if(mRecorder == null){
+        if(mPlayer == null){
             return;
         }
         mPlayer.stop();
@@ -289,6 +294,11 @@ public class MainActivity extends ActionBarActivity{
         playlist.setItems(list, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
+                if(mPlayer != null){
+                    mPlayer.stop();
+                    mPlayer.release();
+                    mPlayer = null;
+                }
                 mPlayer = new MediaPlayer();
                 String filename = list[which].toString();
                 try{
