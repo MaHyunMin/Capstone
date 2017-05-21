@@ -36,12 +36,13 @@ public class MainActivity extends ActionBarActivity{
     String mFilePath, mMusicPath;
     Menu action_menu;
     ImageView pad1, pad2, pad3;
+    int pad_mode = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        getSupportActionBar().setBackgroundDrawable(new ColorDrawable(0xFF353535));
+        getSupportActionBar().setBackgroundDrawable(new ColorDrawable(0xFF474747));
         getSupportActionBar().setDisplayShowTitleEnabled(false); // 액션바 타이틀 제거
         //getSupportActionBar().setDisplayShowHomeEnabled(false);
         setfilepath();
@@ -100,33 +101,7 @@ public class MainActivity extends ActionBarActivity{
             }
         });
     }
-/*
-    // 1 2 3 버튼에 따라 드럼패드(프래그먼트) 전환
-    // 화면 전환 추가
-    public void selectFragment(View view){
-        Fragment fr_pad = null;
 
-        switch(view.getId()){
-            case R.id.frag1Button:
-                fr_pad = new pad1();
-                break;
-
-            case R.id.frag2Button:
-                fr_pad = new pad2();
-                break;
-
-            case R.id.frag3Button:
-                fr_pad = new pad3();
-                break;
-        }
-
-        FragmentManager fm = getFragmentManager();
-        FragmentTransaction fragmentTransaction = fm.beginTransaction();
-        fragmentTransaction.replace(R.id.pad_area, fr_pad);
-        //fragmentTransaction.addToBackStack(null); // 주석 풀면 뒤로가기 누를 시 이전 프레그먼트 나옴
-        fragmentTransaction.commit();
-    }
-*/
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.actionbar_menu, menu);
@@ -141,39 +116,42 @@ public class MainActivity extends ActionBarActivity{
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
         switch (id){
+            case R.id.action_change:
+                if(pad_mode == 0){
+                    Fragment fr_pad = new pad1_realmode();
+                    FragmentManager fm = getFragmentManager();
+                    FragmentTransaction fragmentTransaction = fm.beginTransaction();
+                    fragmentTransaction.replace(R.id.pad_area, fr_pad);
+                    fragmentTransaction.commit();
+                    pad_mode = 1;
+                }else{
+                    Fragment fr_pad = new pad1();
+                    FragmentManager fm = getFragmentManager();
+                    FragmentTransaction fragmentTransaction = fm.beginTransaction();
+                    fragmentTransaction.replace(R.id.pad_area, fr_pad);
+                    fragmentTransaction.commit();
+                    pad_mode = 0;
+                }
+                break;
+
             case R.id.action_musiclist:
                 musicList();
-                action_menu.findItem(R.id.action_record).setEnabled(true);
-                action_menu.findItem(R.id.action_save).setEnabled(false);
-                action_menu.findItem(R.id.action_stop).setEnabled(true);
                 break;
 
             case R.id.action_stop:
                 stopMusic();
-                action_menu.findItem(R.id.action_record).setEnabled(true);
-                action_menu.findItem(R.id.action_save).setEnabled(false);
-                action_menu.findItem(R.id.action_stop).setEnabled(false);
                 break;
 
             case R.id.action_record:
                 startRecording();
-                action_menu.findItem(R.id.action_record).setEnabled(false);
-                action_menu.findItem(R.id.action_save).setEnabled(true);
-                action_menu.findItem(R.id.action_stop).setEnabled(false);
                 break;
 
             case R.id.action_recordlist:
                 recordList();
-                action_menu.findItem(R.id.action_record).setEnabled(true);
-                action_menu.findItem(R.id.action_save).setEnabled(false);
-                action_menu.findItem(R.id.action_stop).setEnabled(true);
                 break;
 
             case R.id.action_save:
                 stopRecording();
-                action_menu.findItem(R.id.action_record).setEnabled(true);
-                action_menu.findItem(R.id.action_save).setEnabled(false);
-                action_menu.findItem(R.id.action_stop).setEnabled(false);
                 break;
         }
         return super.onOptionsItemSelected(item);
@@ -197,9 +175,6 @@ public class MainActivity extends ActionBarActivity{
         }
         mRecorder = new MediaRecorder();
         mRecorder.setAudioSource(MediaRecorder.AudioSource.MIC);
-        //mRecorder.setOutputFormat(MediaRecorder.OutputFormat.MPEG_4);
-        //mRecorder.setAudioEncoder(MediaRecorder.AudioEncoder.AMR_NB);
-        //mRecorder.setOutputFile(mFilePath + "/" + default_filename);
 
         // 음질 개선 코드
         if(Build.VERSION.SDK_INT >= 10){
