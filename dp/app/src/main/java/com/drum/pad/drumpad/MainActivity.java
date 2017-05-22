@@ -107,7 +107,7 @@ public class MainActivity extends ActionBarActivity{
         getMenuInflater().inflate(R.menu.actionbar_menu, menu);
         action_menu = menu;
         action_menu.findItem(R.id.action_record).setEnabled(true);
-        action_menu.findItem(R.id.action_save).setEnabled(false);
+        action_menu.findItem(R.id.action_save).setEnabled(true);
         action_menu.findItem(R.id.action_stop).setEnabled(true);
         return true;
     }
