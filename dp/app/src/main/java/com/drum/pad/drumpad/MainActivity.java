@@ -258,7 +258,9 @@ public class MainActivity extends ActionBarActivity{
         File files = new File(mMusicPath);
         if(files.listFiles().length > 0){
             for(File file : files.listFiles()){
-                items.add(file.getName());
+                // sd카드에서 mp3파일만 뽑아냄
+                if(file.getName().contains(".mp3"))
+                    items.add(file.getName());
             }
         }
         files = null;
