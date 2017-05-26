@@ -11,7 +11,7 @@ import android.media.MediaRecorder;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
-import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -26,14 +26,14 @@ import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 
-public class MainActivity extends ActionBarActivity{
+public class MainActivity extends AppCompatActivity{
     final String rec_f = "/rec_test"; // 녹음저장폴더
     final String default_filename = "record"; // 기본녹음파일이름
     final String sdRootPath = Environment.getExternalStorageDirectory().getAbsolutePath(); // 저장소 경로
     final File rec_test = new File(sdRootPath + rec_f); // 저장소 경로에 만들 폴더
     MediaPlayer mPlayer = null;
     MediaRecorder mRecorder = null;
-    String mFilePath, mMusicPath;
+    String mFilePath, mMusicPath, mMusicPath2;
     Menu action_menu;
     ImageView pad1, pad2, pad3;
     int pad_mode = 0;
@@ -161,10 +161,12 @@ public class MainActivity extends ActionBarActivity{
         if(rec_test.exists() == true) {
             mFilePath = sdRootPath + rec_f;
             mMusicPath = sdRootPath + "/Download";
+            mMusicPath2= sdRootPath + "/Music";
         }else{
             rec_test.mkdir();
             mFilePath = sdRootPath + rec_f;
             mMusicPath = sdRootPath + "/Download";
+            mMusicPath2= sdRootPath + "/Music";
         }
     }
 
@@ -255,6 +257,7 @@ public class MainActivity extends ActionBarActivity{
 
     private void musicList(){
         ArrayList<String> items = new ArrayList<>();
+
         File files = new File(mMusicPath);
         if(files.listFiles().length > 0){
             for(File file : files.listFiles()){
@@ -264,6 +267,17 @@ public class MainActivity extends ActionBarActivity{
             }
         }
         files = null;
+
+        File files2 = new File(mMusicPath2);
+        if(files2.listFiles().length > 0){
+            for(File file : files2.listFiles()){
+                // sd카드에서 mp3파일만 뽑아냄
+                if(file.getName().contains(".mp3"))
+                    items.add(file.getName());
+            }
+        }
+        files2 = null;
+
         final String[] list = items.toArray(new String[items.size()]);
 
         AlertDialog.Builder playlist = new AlertDialog.Builder(this);
