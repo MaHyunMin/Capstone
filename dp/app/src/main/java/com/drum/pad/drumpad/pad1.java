@@ -39,6 +39,7 @@ public class pad1 extends Fragment {
 
                 // 버튼을 눌렀을 때
                 if(action == MotionEvent.ACTION_DOWN){
+                    if(id == R.id.bassButton) {
                         // pool.play(소리, 좌측볼륨, 우측볼륨, 우선순위, 반복여부, 속도);
                         // 우선순위는 0일수록 높음, 반복여부는 0이면 없고 -1이면 무한반복
                         // 속도는 1은 1배속
@@ -46,6 +47,7 @@ public class pad1 extends Fragment {
 
                         // 버튼 이미지를 눌린 이미지로 변경
                         button.setBackgroundResource(R.drawable.button_press);
+                    }
                 }
                 // 버튼을 땟을 때
                 else if(action == MotionEvent.ACTION_UP){

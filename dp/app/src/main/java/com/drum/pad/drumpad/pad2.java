@@ -13,14 +13,12 @@ import android.widget.Button;
 public class pad2 extends Fragment{
     SoundPool pool;
     int chant1, chant2, clap1, click1, click2, crash1, kick1, kick2, openhihat1, snare1, snare2, snare3;
-    int loop1, loop2, loop3, loop4;
-    int isloop = 0;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
 
         View view = inflater.inflate(R.layout.drumpad2, container, false);
-        pool = new SoundPool(9, AudioManager.STREAM_MUSIC, 0);
+        pool = new SoundPool(12, AudioManager.STREAM_MUSIC, 0);
 
         chant1 = pool.load(view.getContext(), R.raw.chant_1, 1);
         chant2 = pool.load(view.getContext(), R.raw.chant_2, 1);
@@ -34,10 +32,6 @@ public class pad2 extends Fragment{
         snare1 = pool.load(view.getContext(), R.raw.snare_1, 1);
         snare2 = pool.load(view.getContext(), R.raw.snare_2, 1);
         snare3 = pool.load(view.getContext(), R.raw.snare_3, 1);
-        loop1 = pool.load(view.getContext(), R.raw.drum_loop_1, 1);
-        loop2 = pool.load(view.getContext(), R.raw.drum_loop_3, 1);
-        loop3 = pool.load(view.getContext(), R.raw.piano_loop_1, 1);
-        loop4 = pool.load(view.getContext(), R.raw.synth_loop_1, 1);
 
         Button chant1Btn = (Button)view.findViewById(R.id.Chant1Button);
         Button chant2Btn = (Button)view.findViewById(R.id.Chant2Button);
@@ -51,11 +45,6 @@ public class pad2 extends Fragment{
         Button snare1Btn = (Button)view.findViewById(R.id.Snare1Button);
         Button snare2Btn = (Button)view.findViewById(R.id.Snare2Button);
         Button snare3Btn = (Button)view.findViewById(R.id.Snare3Button);
-        Button loop1Btn = (Button)view.findViewById(R.id.Loop1Button);
-        Button loop2Btn = (Button)view.findViewById(R.id.Loop2Button);
-        Button loop3Btn = (Button)view.findViewById(R.id.Loop3Button);
-        Button loop4Btn = (Button)view.findViewById(R.id.Loop4Button);
-
 
         chant1Btn.setOnTouchListener(new View.OnTouchListener() {
             @Override
@@ -356,114 +345,6 @@ public class pad2 extends Fragment{
                     // 우선순위는 0일수록 높음, 반복여부는 0이면 없고 -1이면 무한반복
                     // 속도는 1은 1배속
                     pool.play(snare3, 1, 1, 0, 0, 1);
-
-                    // 버튼 이미지를 눌린 이미지로 변경
-                    button.setBackgroundResource(R.drawable.button2_press);
-                }
-                // 버튼을 땟을 때
-                else if (action == MotionEvent.ACTION_UP) {
-                    // 버튼 이미지 복구
-                    button.setBackgroundResource(R.drawable.button2);
-                }
-                return true;
-            }
-        });
-
-        loop1Btn.setOnTouchListener(new View.OnTouchListener() {
-            @Override
-            public boolean onTouch(View v, MotionEvent event) {
-                Button button = (Button) v;          // 버튼 객체
-                int action = event.getAction();     // 버튼 이벤트 발생 변수
-                int id = v.getId();                 // 버튼 id값 받을 변수
-
-                // 버튼을 눌렀을 때
-                if (action == MotionEvent.ACTION_DOWN) {
-                    // pool.play(소리, 좌측볼륨, 우측볼륨, 우선순위, 반복여부, 속도);
-                    // 우선순위는 0일수록 높음, 반복여부는 0이면 없고 -1이면 무한반복
-                    // 속도는 1은 1배속
-
-                    pool.play(loop1, 1, 1, 0, isloop, 1);
-
-                    // 버튼 이미지를 눌린 이미지로 변경
-                    button.setBackgroundResource(R.drawable.button2_press);
-                }
-                // 버튼을 땟을 때
-                else if (action == MotionEvent.ACTION_UP) {
-                    // 버튼 이미지 복구
-                    button.setBackgroundResource(R.drawable.button2);
-                }
-                return true;
-            }
-        });
-
-        loop2Btn.setOnTouchListener(new View.OnTouchListener() {
-            @Override
-            public boolean onTouch(View v, MotionEvent event) {
-                Button button = (Button) v;          // 버튼 객체
-                int action = event.getAction();     // 버튼 이벤트 발생 변수
-                int id = v.getId();                 // 버튼 id값 받을 변수
-
-                // 버튼을 눌렀을 때
-                if (action == MotionEvent.ACTION_DOWN) {
-                    // pool.play(소리, 좌측볼륨, 우측볼륨, 우선순위, 반복여부, 속도);
-                    // 우선순위는 0일수록 높음, 반복여부는 0이면 없고 -1이면 무한반복
-                    // 속도는 1은 1배속
-
-                    pool.play(loop2, 1, 1, 0, isloop, 1);
-
-                    // 버튼 이미지를 눌린 이미지로 변경
-                    button.setBackgroundResource(R.drawable.button2_press);
-                }
-                // 버튼을 땟을 때
-                else if (action == MotionEvent.ACTION_UP) {
-                    // 버튼 이미지 복구
-                    button.setBackgroundResource(R.drawable.button2);
-                }
-                return true;
-            }
-        });
-
-        loop3Btn.setOnTouchListener(new View.OnTouchListener() {
-            @Override
-            public boolean onTouch(View v, MotionEvent event) {
-                Button button = (Button) v;          // 버튼 객체
-                int action = event.getAction();     // 버튼 이벤트 발생 변수
-                int id = v.getId();                 // 버튼 id값 받을 변수
-
-                // 버튼을 눌렀을 때
-                if (action == MotionEvent.ACTION_DOWN) {
-                    // pool.play(소리, 좌측볼륨, 우측볼륨, 우선순위, 반복여부, 속도);
-                    // 우선순위는 0일수록 높음, 반복여부는 0이면 없고 -1이면 무한반복
-                    // 속도는 1은 1배속
-
-                    pool.play(loop3, 1, 1, 0, isloop, 1);
-
-                    // 버튼 이미지를 눌린 이미지로 변경
-                    button.setBackgroundResource(R.drawable.button2_press);
-                }
-                // 버튼을 땟을 때
-                else if (action == MotionEvent.ACTION_UP) {
-                    // 버튼 이미지 복구
-                    button.setBackgroundResource(R.drawable.button2);
-                }
-                return true;
-            }
-        });
-
-        loop4Btn.setOnTouchListener(new View.OnTouchListener() {
-            @Override
-            public boolean onTouch(View v, MotionEvent event) {
-                Button button = (Button) v;          // 버튼 객체
-                int action = event.getAction();     // 버튼 이벤트 발생 변수
-                int id = v.getId();                 // 버튼 id값 받을 변수
-
-                // 버튼을 눌렀을 때
-                if (action == MotionEvent.ACTION_DOWN) {
-                    // pool.play(소리, 좌측볼륨, 우측볼륨, 우선순위, 반복여부, 속도);
-                    // 우선순위는 0일수록 높음, 반복여부는 0이면 없고 -1이면 무한반복
-                    // 속도는 1은 1배속
-
-                    pool.play(loop4, 1, 1, 0, 0, 1);
 
                     // 버튼 이미지를 눌린 이미지로 변경
                     button.setBackgroundResource(R.drawable.button2_press);
