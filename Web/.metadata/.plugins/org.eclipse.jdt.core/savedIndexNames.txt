@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 INDEX VERSION 1.129+C:\Users\Arvens\Desktop\capstone\Web\.metadata\.plugins\org.eclipse.jdt.core
 194259052.index
 2709225165.index
@@ -21,3 +22,24 @@ INDEX VERSION 1.129+C:\Users\Arvens\Desktop\capstone\Web\.metadata\.plugins\org.
 3620471903.index
 559129880.index
 1942551810.index
+=======
+INDEX VERSION 1.129+C:\Users\HyunMin\Desktop\capstone\version\Web\.metadata\.plugins\org.eclipse.jdt.core
+843494433.index
+91472061.index
+194205294.index
+2221491804.index
+1539866187.index
+2385303860.index
+449440424.index
+3643810303.index
+2997567257.index
+1525087677.index
+543038442.index
+3314433690.index
+1199826107.index
+2561179376.index
+2911469802.index
+30881555.index
+1475717011.index
+1841280308.index
+>>>>>>> dd6fcce0aa20fc44c1e57af8360590a1dd32ea2c

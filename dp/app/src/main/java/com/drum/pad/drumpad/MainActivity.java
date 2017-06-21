@@ -11,7 +11,7 @@ import android.media.MediaRecorder;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
-import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -26,17 +26,18 @@ import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 
-public class MainActivity extends ActionBarActivity{
+public class MainActivity extends AppCompatActivity{
     final String rec_f = "/rec_test"; // 녹음저장폴더
     final String default_filename = "record"; // 기본녹음파일이름
     final String sdRootPath = Environment.getExternalStorageDirectory().getAbsolutePath(); // 저장소 경로
     final File rec_test = new File(sdRootPath + rec_f); // 저장소 경로에 만들 폴더
     MediaPlayer mPlayer = null;
     MediaRecorder mRecorder = null;
-    String mFilePath, mMusicPath;
+    String mFilePath, mMusicPath, mMusicPath2; // 각 경로들
     Menu action_menu;
     ImageView pad1, pad2, pad3;
-    int pad_mode = 0;
+    int pad_mode = 0;           // 패드 형태 구분용
+    ArrayList<String> items = new ArrayList<>(); // mp3파일 넣을 리스트
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -157,17 +158,21 @@ public class MainActivity extends ActionBarActivity{
         return super.onOptionsItemSelected(item);
     }
 
+    // 경로 설정
     private void setfilepath(){
         if(rec_test.exists() == true) {
             mFilePath = sdRootPath + rec_f;
             mMusicPath = sdRootPath + "/Download";
+            mMusicPath2= sdRootPath + "/Music";
         }else{
             rec_test.mkdir();
             mFilePath = sdRootPath + rec_f;
             mMusicPath = sdRootPath + "/Download";
+            mMusicPath2= sdRootPath + "/Music";
         }
     }
 
+    // 녹음시작
     private void startRecording(){
         if(mRecorder != null){
             mRecorder.release();
@@ -201,6 +206,7 @@ public class MainActivity extends ActionBarActivity{
         mRecorder.start();
     }
 
+    // 녹음 중지 후 저장
     private void stopRecording(){
         if(mRecorder == null){
             return;
@@ -243,6 +249,7 @@ public class MainActivity extends ActionBarActivity{
         alert.show();
     }
 
+    // 음악 재생 중지
     private void stopMusic(){
         if(mPlayer == null){
             return;
@@ -253,17 +260,11 @@ public class MainActivity extends ActionBarActivity{
         Toast.makeText(getApplicationContext(), "재생 중지", Toast.LENGTH_SHORT).show();
     }
 
+    // 음악 목록 가져온 후 재생
     private void musicList(){
-        ArrayList<String> items = new ArrayList<>();
-        File files = new File(mMusicPath);
-        if(files.listFiles().length > 0){
-            for(File file : files.listFiles()){
-                // sd카드에서 mp3파일만 뽑아냄
-                if(file.getName().contains(".mp3"))
-                    items.add(file.getName());
-            }
-        }
-        files = null;
+        searchFile(mMusicPath);
+        searchFile(mMusicPath2);
+
         final String[] list = items.toArray(new String[items.size()]);
 
         AlertDialog.Builder playlist = new AlertDialog.Builder(this);
@@ -294,6 +295,7 @@ public class MainActivity extends ActionBarActivity{
         alertDialog.show();
     }
 
+    // 녹음파일 목록 가져온 후 재생
     private void recordList(){
         ArrayList<String> items = new ArrayList<>();
         File files = new File(mFilePath);
@@ -330,5 +332,26 @@ public class MainActivity extends ActionBarActivity{
         });
         AlertDialog alertDialog = playlist.create();
         alertDialog.show();
+    }
+
+    // Music폴더와 Download폴더에서 mp3파일 골라내기
+    private void searchFile(String str){
+        File root = new File(str);
+        String[] file = root.list();
+        if(file != null)
+        {
+            for(int i = 0; i < file.length; ++i)
+            {
+                File f = new File(str + "/" + file[i]);
+                if(f.isFile())
+                {
+                    if(f.getName().contains(".mp3"))
+                        items.add(f.getName());
+                    continue;
+                }
+                if(f.isDirectory())
+                    searchFile(str + "/" + file[i]);
+            }
+        }
     }
 }

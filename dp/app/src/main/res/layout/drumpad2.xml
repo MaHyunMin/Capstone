@@ -1,151 +1,124 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#000000">
+    android:background="#353535">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0px"
-        android:layout_weight="6"
+        android:layout_weight="8"
         android:orientation="vertical">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_weight="1">
 
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+            <com.drum.pad.drumpad.SquareBtn
+                android:layout_width="0px"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:id="@+id/Chant1Button"
                 android:background="@drawable/drum_button2"/>
 
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+            <com.drum.pad.drumpad.SquareBtn
+                android:layout_width="0px"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:id="@+id/Chant2Button"
                 android:background="@drawable/drum_button2"/>
 
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+            <com.drum.pad.drumpad.SquareBtn
+                android:layout_width="0px"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:id="@+id/Clap1Button"
                 android:background="@drawable/drum_button2"/>
 
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:id="@+id/Loop1Button"
-                android:background="@drawable/drum_button2"/>
-
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_weight="1">
 
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+            <com.drum.pad.drumpad.SquareBtn
+                android:layout_width="0px"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:id="@+id/Click1Button"
                 android:background="@drawable/drum_button2"/>
 
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+            <com.drum.pad.drumpad.SquareBtn
+                android:layout_width="0px"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:id="@+id/Click2Button"
                 android:background="@drawable/drum_button2"/>
 
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+            <com.drum.pad.drumpad.SquareBtn
+                android:layout_width="0px"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:id="@+id/Crash1Button"
                 android:background="@drawable/drum_button2"/>
 
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:id="@+id/Loop2Button"
-                android:background="@drawable/drum_button2"/>
-
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_weight="1">
 
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+            <com.drum.pad.drumpad.SquareBtn
+                android:layout_width="0px"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:id="@+id/Kick1Button"
                 android:background="@drawable/drum_button2"/>
 
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+            <com.drum.pad.drumpad.SquareBtn
+                android:layout_width="0px"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:id="@+id/Kick2Button"
                 android:background="@drawable/drum_button2"/>
 
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+            <com.drum.pad.drumpad.SquareBtn
+                android:layout_width="0px"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:id="@+id/Open_Hihat1Button"
-                android:background="@drawable/drum_button2"/>
-
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:id="@+id/Loop3Button"
                 android:background="@drawable/drum_button2"/>
 
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_weight="1">
 
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+            <com.drum.pad.drumpad.SquareBtn
+                android:layout_width="0px"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:id="@+id/Snare1Button"
                 android:background="@drawable/drum_button2"/>
 
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+            <com.drum.pad.drumpad.SquareBtn
+                android:layout_width="0px"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:id="@+id/Snare2Button"
                 android:background="@drawable/drum_button2"/>
 
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+            <com.drum.pad.drumpad.SquareBtn
+                android:layout_width="0px"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:id="@+id/Snare3Button"
-                android:background="@drawable/drum_button2"/>
-
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:id="@+id/Loop4Button"
                 android:background="@drawable/drum_button2"/>
 
         </LinearLayout>
