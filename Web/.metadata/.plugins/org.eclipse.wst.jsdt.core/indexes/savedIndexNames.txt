@@ -3,6 +3,5 @@ INDEX VERSION 1.3+C:\Users\Arvens\Desktop\capstone\Web\.metadata\.plugins\org.ec
 3350975633.index
 1297441351.index
 2837650997.index
-2486761925.index
 2385303860.index
 4065597249.index
