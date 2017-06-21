@@ -46,7 +46,7 @@
 <body>
 	<div class="wrapper">
 			<div class="header1">
-				공유하기
+			
 			</div>
 			<div class="header2">
 				<from name=form_login method=post>
@@ -127,7 +127,6 @@
 				</table>
 			</div>
 			<div class="footer">
-				바닥
 			</div>
 		</div>
 

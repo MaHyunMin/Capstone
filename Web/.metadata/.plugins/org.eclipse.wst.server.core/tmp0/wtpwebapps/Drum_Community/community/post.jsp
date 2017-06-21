@@ -10,7 +10,6 @@
 <link rel="stylesheet" href="community.css" type="text/css"/>
 </head>
 <body>
-<body>
 	<div class="wrapper">
 			<div class="header1">
 				자유게시판
@@ -61,7 +60,7 @@
 						rs = stmt.executeQuery(sqlList);
 						
 				%>
-				<table width="100%" cellpadding="0" cellspacing="0" border="0">
+				<table width="100%" cellpadding="0" cellspacing="0" border="0" align = center>
 				  <tr height="5"><td width="5"></td></tr>
 				 <tr style="background:url('img/table_mid.gif') repeat-x; text-align:center;">
 				   <td width="5"><img src="img/table_left.gif" width="5" height="30" /></td>
@@ -92,7 +91,7 @@
 				<tr height="25" align="center">
 					<td>&nbsp;</td>
 					<td><%=idx %></td>
-					<td align="left"><%=title %></td>
+					<td align="left"><a href="view.jsp?idx=<%=idx%>"><%=title %></td>
 					<td align="center"><%=name %></td>
 					<td align="center"><%=time %></td>
 					<td align="center"><%=hit %></td>
@@ -117,8 +116,7 @@
 				  <tr align="center">
 				   <td><input type=button value="글쓰기" OnClick = "window.location='write.jsp'"></td>
 				  </tr>
-				</table>
-				
+				</table>				
 			</div>
 			<div class="footer">
 			</div>

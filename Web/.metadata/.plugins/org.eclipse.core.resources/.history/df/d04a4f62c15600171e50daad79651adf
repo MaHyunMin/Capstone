@@ -1,0 +1,162 @@
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
+<%@ page import = "java.sql.*" %>
+<script language = "javascript">
+	function modifyCheck()
+	{
+		var form = document.modifyform;
+		
+		if(!form.password.value)
+			{
+				alert("비밀번호를 적어주세요");
+				form.password.focus();
+				return;
+			}
+		
+		if(!form.title.value)
+			{
+				alert("제목을 적어주세요");
+				form.title.focus();
+				return;
+			}
+		
+		if(!form.memo.value)
+			{
+				alert("내용을 적어주세요");
+				form.memo.focus();
+				return;
+			}
+		form.submit();
+	}
+</script>
+<%
+	request.setCharacterEncoding("euc-kr");
+	Class.forName("com.mysql.jdbc.Driver");
+	String url = "jdbc:mysql://localhost/board";
+	String id = "root";
+	String pass = "wjrdnjf8457";
+	
+	String name = "";
+	String password = "";
+	String title = "";
+	String memo = "";
+	
+	int idx = Integer.parseInt(request.getParameter("idx"));
+	
+	try {
+		
+		Connection conn = DriverManager.getConnection(url,id,pass);
+		Statement stmt = conn.createStatement();
+		
+		String sql = "SELECT USERNAME, u_PASSWORD, TITLE, MEMO FROM boardinfo WHERE NUM=" + idx;
+		ResultSet rs = stmt.executeQuery(sql);
+	
+		
+		if(rs.next()){
+			
+			name = rs.getString(1);
+			password = rs.getString(2);
+			title = rs.getString(3);
+			memo = rs.getString(4);
+		}
+		
+		rs.close();
+		stmt.close();
+		conn.close();
+	
+	}catch(SQLException e) {
+		out.println( e.toString() );
+	}
+%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
+<title>자유게시판</title>
+<link rel="stylesheet" href="community.css" type="text/css"/>
+</head>
+<body>
+	<div class="wrapper">
+			<div class="header1">
+				공유하기
+			</div>
+			<div class="header2">
+				<from name=form_login method=post>
+					ID <input type="text" name="id">
+					PW <input type="text" name="pw">
+					<input type="submit" name="login" value="로그인">
+					<button type="button" name="member" onclick = "location.href = 'member.html'">회원가입</button>
+				</from>
+			</div>
+			<div class="menu">
+					<li class="bar">│</li>
+					<li class="menuLink"><a href="post.jsp">자유게시판</a></li>
+					<li class="bar">│</li>
+					<li class="menuLink"><a href="share.jsp">공유하기</a></li>
+					<li class="bar">│</li>
+					<li class="menuLink"><a href="#">자랑하기</a></li>
+					<li class="bar">│</li>
+					<li class="menuLink"><a href="notice.jsp">공지사항</a></li>
+					<li class="bar">│</li>
+					<li class="menuLink"><a href="main.html">홈</a></li>
+					<li class="bar">|</li>
+			</div>
+			<div class="board">
+				<table>
+				<form name = modifyform method = post action = "modify_ok.jsp?idx=<%=idx %>">
+					 <tr>
+					  <td>
+					   <table width="100%" cellpadding="0" cellspacing="0" border="0">
+					    <tr style="background:url('img/table_mid.gif') repeat-x; text-align:center;">
+					     <td width="5"><img src="img/table_left.gif" width="5" height="30" /></td>
+					     <td>수정</td>
+					     <td width="5"><img src="img/table_right.gif" width="5" height="30" /></td>
+					    </tr>
+					   </table>
+					  <table>
+					    <tr>
+					     <td>&nbsp;</td>
+					     <td align="center">제목</td>
+					     <td><input type = text name="title" size="50" maxlength="100"></td>
+					     <td>&nbsp;</td>
+					    </tr>
+					    <tr height="1" bgcolor="#dddddd"><td colspan="4"></td></tr>
+					   <tr>
+					     <td>&nbsp;</td>
+					     <td align="center">이름</td>
+					     <td><input type = hidden name="name" size="50" maxlength="50"><%=name %></td>
+					     <td>&nbsp;</td>
+					    </tr>
+					     <tr height="1" bgcolor="#dddddd"><td colspan="4"></td></tr>
+					   <tr>
+					     <td>&nbsp;</td>
+					     <td align="center">비밀번호</td>
+					     <td><input type="password" password" size="50" maxlength="50"></td>
+					     <td>&nbsp;</td>
+					    </tr>
+					    <tr height="1" bgcolor="#dddddd"><td colspan="4"></td></tr>
+					    <tr>
+					     <td>&nbsp;</td>
+					     <td align="center">내용</td>
+					     <td><textarea name="memo" cols="50" rows="13"><%=memo %></textarea></td>
+					     <td>&nbsp;</td>
+					    </tr>
+					    <tr height="1" bgcolor="#dddddd"><td colspan="4"></td></tr>
+					    <tr height="1" bgcolor="#82B5DF"><td colspan="4"></td></tr>
+					    <tr align="center">
+					     <td>&nbsp;</td>
+					     <td colspan="2"><input type=button value="수정" OnClick = "javascript:modifyCheck();">
+					      <input type=button value="취소" OnClick = "javascript:history.back(-1)">
+					     <td>&nbsp;</td>
+					    </tr>
+					   </table>
+					  </td>
+					 </tr>
+				</form>
+				</table>
+			</div>
+			<div class="footer">
+			</div>
+		</div>
+</body>
+</html>

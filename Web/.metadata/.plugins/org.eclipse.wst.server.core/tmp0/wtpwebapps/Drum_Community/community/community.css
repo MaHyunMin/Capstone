@@ -76,8 +76,8 @@ body{
  
 .board{
 	overflow: hidden;
-	align : center;
 	float : left;
+	width : auto;
 	height : 80%;
 }
 
