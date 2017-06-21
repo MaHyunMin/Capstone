@@ -14,7 +14,7 @@
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@drawable/title"/>
+            android:background="@drawable/main_title"/>
 
         <Button
             android:layout_width="300dp"
@@ -29,7 +29,7 @@
             android:layout_height="60dp"
             android:id="@+id/btnTutorial"
             android:layout_x="30dp"
-            android:layout_y="300dp"
+            android:layout_y="320dp"
             android:background="@drawable/tutorialbutton"/>
 
         <Button
@@ -37,7 +37,7 @@
             android:layout_height="60dp"
             android:id="@+id/btnExit"
             android:layout_x="30dp"
-            android:layout_y="370dp"
+            android:layout_y="410dp"
             android:background="@drawable/exitbutton"/>
 
     </AbsoluteLayout>
