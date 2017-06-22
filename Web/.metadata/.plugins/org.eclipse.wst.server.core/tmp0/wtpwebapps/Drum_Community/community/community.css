@@ -76,9 +76,14 @@ body{
  
 .board{
 	overflow: hidden;
-	float : left;
-	width : auto;
+	position: absolute;
+	float : right;
 	height : 80%;
+	margin : 0 auto;
+}
+
+.board table {
+	margin : 0 auto;
 }
 
 .board figure img{
@@ -102,6 +107,7 @@ body{
 	margin: 0;
 	top: 0;
 	left: 0;
+	right: 0;
 }
 
 .footer{

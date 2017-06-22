@@ -35,7 +35,7 @@
 					<li class="menuLink"><a href="main.html">홈</a></li>
 					<li class="bar">|</li>
 			</div>
-			<div class="board">
+			<div class="board" position="absolute">
 				<%
 					Class.forName("com.mysql.jdbc.Driver");
 					String url = "jdbc:mysql://localhost/board";
