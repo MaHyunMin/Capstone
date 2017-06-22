@@ -102,7 +102,7 @@ body{
 }
 
 .board text{
-	position : relative;
+	position : absoulte;
 	width: 300%;
 	margin: 0;
 	top: 0;
