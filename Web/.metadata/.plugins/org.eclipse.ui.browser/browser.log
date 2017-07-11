@@ -1,3 +1,65 @@
 
 5월 25, 2017 18:31:49.44 NEW SESSION
 5월 25, 2017 18:31:49.44 [16364:17160:0525/183149.438:ERROR:render_process_host_impl.cc(2094)] Request for unknown Channel-associated interface: device::mojom::ScreenOrientationListener
+
+6월 26, 2017 10:47:16.14 NEW SESSION
+6월 26, 2017 10:47:16.14 
+6월 26, 2017 10:47:16.14 KLIB_SelfTest return : KLR_OK
+6월 26, 2017 10:48:23.44 
+6월 26, 2017 10:48:23.44 KLIB_SelfTest return : KLR_OK
+
+6월 26, 2017 10:49:14.00 NEW SESSION
+6월 26, 2017 10:49:14.00 
+6월 26, 2017 10:49:14.00 KLIB_SelfTest return : KLR_OK
+6월 26, 2017 10:54:09.97 
+6월 26, 2017 10:54:09.97 KLIB_SelfTest return : KLR_OK
+6월 26, 2017 10:58:00.67 
+6월 26, 2017 10:58:00.67 KLIB_SelfTest return : KLR_OK
+6월 26, 2017 11:08:51.09 
+6월 26, 2017 11:08:51.09 KLIB_SelfTest return : KLR_OK
+6월 26, 2017 11:10:26.28 
+6월 26, 2017 11:10:26.28 KLIB_SelfTest return : KLR_OK
+6월 26, 2017 11:12:58.18 [13012:9920:0626/111258.186:ERROR:ssl_client_socket_impl.cc(1135)] handshake failed; returned -1, SSL error code 1, net_error -100
+6월 26, 2017 11:26:49.18 
+6월 26, 2017 11:26:49.18 KLIB_SelfTest return : KLR_OK
+
+6월 27, 2017 13:41:54.24 NEW SESSION
+6월 27, 2017 13:41:54.24 [1040:1460:0627/134154.240:ERROR:service_manager.cc(158)] Connection InterfaceProviderSpec prevented service: content_plugin from binding interface: memory_instrumentation::mojom::Coordinator exposed by: content_browser
+6월 27, 2017 13:42:01.96 
+6월 27, 2017 13:42:01.96 KLIB_SelfTest return : KLR_OK
+6월 27, 2017 13:43:08.41 [15596:16736:0627/134308.410:ERROR:service_manager.cc(158)] Connection InterfaceProviderSpec prevented service: content_plugin from binding interface: memory_instrumentation::mojom::Coordinator exposed by: content_browser
+6월 27, 2017 13:43:36.15 
+6월 27, 2017 13:43:36.15 KLIB_SelfTest return : KLR_OK
+6월 27, 2017 13:43:56.34 [13468:2896:0627/134356.344:ERROR:service_manager.cc(158)] Connection InterfaceProviderSpec prevented service: content_plugin from binding interface: memory_instrumentation::mojom::Coordinator exposed by: content_browser
+6월 27, 2017 13:44:00.03 
+6월 27, 2017 13:44:00.03 KLIB_SelfTest return : KLR_OK
+6월 27, 2017 13:44:13.10 
+6월 27, 2017 13:44:13.10 KLIB_SelfTest return : KLR_OK
+6월 27, 2017 13:45:39.09 
+6월 27, 2017 13:45:39.09 KLIB_SelfTest return : KLR_OK
+
+6월 30, 2017 15:30:15.22 NEW SESSION
+6월 30, 2017 15:30:15.22 [12832:1420:0630/153015.219:ERROR:cache_util_win.cc(20)] Unable to move the cache: 5
+6월 30, 2017 15:30:15.22 [12832:1420:0630/153015.219:ERROR:cache_util.cc(134)] Unable to move cache folder C:\Users\Arvens\AppData\Local\Google\Chrome\User Data\ShaderCache\GPUCache to C:\Users\Arvens\AppData\Local\Google\Chrome\User Data\ShaderCache\old_GPUCache_000
+6월 30, 2017 15:30:15.22 [12832:1420:0630/153015.219:ERROR:disk_cache.cc(132)] Unable to create cache
+6월 30, 2017 15:30:15.22 [12832:1420:0630/153015.219:ERROR:shader_disk_cache.cc(604)] Shader Cache Creation failed: -2
+6월 30, 2017 15:30:20.30 
+6월 30, 2017 15:30:20.30 KLIB_SelfTest return : KLR_OK
+6월 30, 2017 15:30:30.66 [5328:16016:0630/153030.667:ERROR:cache_util_win.cc(20)] Unable to move the cache: 5
+6월 30, 2017 15:30:30.66 [5328:16016:0630/153030.667:ERROR:cache_util.cc(134)] Unable to move cache folder C:\Users\Arvens\AppData\Local\Google\Chrome\User Data\ShaderCache\GPUCache to C:\Users\Arvens\AppData\Local\Google\Chrome\User Data\ShaderCache\old_GPUCache_000
+6월 30, 2017 15:30:30.66 [5328:16016:0630/153030.667:ERROR:disk_cache.cc(132)] Unable to create cache
+6월 30, 2017 15:30:30.67 [5328:16016:0630/153030.667:ERROR:shader_disk_cache.cc(604)] Shader Cache Creation failed: -2
+6월 30, 2017 15:30:34.99 [7836:8820:0630/153034.989:ERROR:cache_util_win.cc(20)] Unable to move the cache: 5
+6월 30, 2017 15:30:34.99 [7836:8820:0630/153034.989:ERROR:cache_util.cc(134)] Unable to move cache folder C:\Users\Arvens\AppData\Local\Google\Chrome\User Data\ShaderCache\GPUCache to C:\Users\Arvens\AppData\Local\Google\Chrome\User Data\ShaderCache\old_GPUCache_000
+6월 30, 2017 15:30:34.99 [7836:8820:0630/153034.989:ERROR:disk_cache.cc(132)] Unable to create cache
+6월 30, 2017 15:30:34.99 [7836:8820:0630/153034.989:ERROR:shader_disk_cache.cc(604)] Shader Cache Creation failed: -2
+6월 30, 2017 15:30:38.27 [14712:16620:0630/153038.275:ERROR:cache_util_win.cc(20)] Unable to move the cache: 5
+6월 30, 2017 15:30:38.27 [14712:16620:0630/153038.275:ERROR:cache_util.cc(134)] Unable to move cache folder C:\Users\Arvens\AppData\Local\Google\Chrome\User Data\ShaderCache\GPUCache to C:\Users\Arvens\AppData\Local\Google\Chrome\User Data\ShaderCache\old_GPUCache_000
+6월 30, 2017 15:30:38.27 [14712:16620:0630/153038.275:ERROR:disk_cache.cc(132)] Unable to create cache
+6월 30, 2017 15:30:38.27 [14712:16620:0630/153038.275:ERROR:shader_disk_cache.cc(604)] Shader Cache Creation failed: -2
+6월 30, 2017 15:30:47.36 [12184:10820:0630/153047.365:ERROR:cache_util_win.cc(20)] Unable to move the cache: 5
+6월 30, 2017 15:30:47.36 [12184:10820:0630/153047.365:ERROR:cache_util.cc(134)] Unable to move cache folder C:\Users\Arvens\AppData\Local\Google\Chrome\User Data\ShaderCache\GPUCache to C:\Users\Arvens\AppData\Local\Google\Chrome\User Data\ShaderCache\old_GPUCache_000
+6월 30, 2017 15:30:47.36 [12184:10820:0630/153047.365:ERROR:disk_cache.cc(132)] Unable to create cache
+6월 30, 2017 15:30:47.36 [12184:10820:0630/153047.365:ERROR:shader_disk_cache.cc(604)] Shader Cache Creation failed: -2
+6월 30, 2017 15:30:49.76 
+6월 30, 2017 15:30:49.76 KLIB_SelfTest return : KLR_OK
