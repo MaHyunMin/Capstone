@@ -29,6 +29,7 @@ android {
 
 	defaultConfig {
 		targetSdkVersion 24
+		applicationId 'com.drumpad.drumtutorials'
 	}
 
 	lintOptions {
@@ -36,14 +37,18 @@ android {
 	}
 
 	buildTypes {
-		debug {
-			jniDebuggable true
-		}
-		release {
-			minifyEnabled false
-			proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-unity.txt'
-			
-		}
+  		debug {
+ 			minifyEnabled false
+ 			useProguard false
+ 			proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-unity.txt'
+  			jniDebuggable true
+  		}
+  		release {
+ 			minifyEnabled true
+ 			useProguard true
+  			proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-unity.txt'
+  			
+  		}
 	}
 
 }

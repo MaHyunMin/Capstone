@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class tutorial1 : MonoBehaviour {
 
     private GameObject note;
-    private GameObject name;
+    private GameObject n;
     float[] vy = new float[5] { -0.7f, 0.25f, -0.2f, 0.73f, 0.5f }; // base, snare, floor, tom1, tom2
     int i = 0;
     Vector3 v;
@@ -20,9 +20,9 @@ public class tutorial1 : MonoBehaviour {
             note = GameObject.FindGameObjectWithTag("Note");
         }
 
-        if(name == null)
+        if(n == null)
         {
-            name = GameObject.FindGameObjectWithTag("Name");
+            n = GameObject.FindGameObjectWithTag("Name");
         }
         
         v = note.transform.localPosition;
@@ -31,7 +31,7 @@ public class tutorial1 : MonoBehaviour {
         v.z = -1;
 
         sp = (Sprite)Resources.Load("Image/name" + i, typeof(Sprite));
-        name.GetComponent<SpriteRenderer>().sprite = sp;
+        n.GetComponent<SpriteRenderer>().sprite = sp;
     }
 
     public void backScene()
@@ -47,7 +47,7 @@ public class tutorial1 : MonoBehaviour {
             v.y = vy[i];
             note.transform.position = v;
             sp = (Sprite)Resources.Load("Image/name" + i, typeof(Sprite));
-            name.GetComponent<SpriteRenderer>().sprite = sp;
+            n.GetComponent<SpriteRenderer>().sprite = sp;
         }
         else
         {
@@ -55,7 +55,7 @@ public class tutorial1 : MonoBehaviour {
             v.y = vy[i];
             note.transform.position = v;
             sp = (Sprite)Resources.Load("Image/name" + i, typeof(Sprite));
-            name.GetComponent<SpriteRenderer>().sprite = sp;
+            n.GetComponent<SpriteRenderer>().sprite = sp;
         }
     }
 
@@ -67,7 +67,7 @@ public class tutorial1 : MonoBehaviour {
             v.y = vy[i];
             note.transform.position = v;
             sp = (Sprite)Resources.Load("Image/name" + i, typeof(Sprite));
-            name.GetComponent<SpriteRenderer>().sprite = sp;
+            n.GetComponent<SpriteRenderer>().sprite = sp;
         }
         else
         {
@@ -75,7 +75,7 @@ public class tutorial1 : MonoBehaviour {
             v.y = vy[i];
             note.transform.position = v;
             sp = (Sprite)Resources.Load("Image/name" + i, typeof(Sprite));
-            name.GetComponent<SpriteRenderer>().sprite = sp;
+            n.GetComponent<SpriteRenderer>().sprite = sp;
         }
     }
 }

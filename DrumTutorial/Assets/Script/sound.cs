@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -7,53 +8,59 @@ public class sound : MonoBehaviour {
     public SpriteRenderer sr;
     public Sprite curr;
     public Sprite next;
-    public AudioClip audio;
+    public AudioClip audioclip;
 
     private Touch touch;
     private Vector3 pos;
 
+    private GameObject snareBtn;
+
+    public static int clicknum = 10;
+
     // Use this for initialization
     void Start () {
-		
-	}
+        if (snareBtn == null)
+        {
+            try
+            {
+                snareBtn = GameObject.Find("SnareBtn");
+            }
+            catch (NullReferenceException ex)
+            {
+                Debug.Log("No name");
+            }
+        }
+    }
 	
 	// Update is called once per frame
 	void Update () {
-        /*
-        if(Input.touchCount > 0)
-        {
-            for(int i = 0; i < Input.touchCount; i++)
-            {
-                touch = Input.GetTouch(i);
-                if(touch.phase == TouchPhase.Began)
-                {
-                    pos = Camera.main.ScreenToWorldPoint(touch.position);
-                    GetComponent<AudioSource>().clip = audio;
-                    GetComponent<AudioSource>().PlayOneShot(audio);
-                    sr.sprite = next;
-                    break;
-                }
-                else if (Input.GetTouch(i).phase == TouchPhase.Moved)
-                {
-                    sr.sprite = next;
-                }
-                else if (Input.GetTouch(i).phase == TouchPhase.Canceled)
-                {
-                    sr.sprite = curr;
-                }
-                else if (Input.GetTouch(i).phase == TouchPhase.Ended)
-                {
-                    sr.sprite = curr;
-                }
-            }
-        }
-        */
+        
     }
 
     public void OnMouseDown()
     {
-        GetComponent<AudioSource>().clip = audio;
-        GetComponent<AudioSource>().PlayOneShot(audio);
+        if (this.gameObject.name == "bassBtn" || this.gameObject.name == "crashBtn")
+        {
+            clicknum = 1;
+        }
+        else if (this.gameObject.name == "floorBtn" || this.gameObject.name == "hihat1Btn")
+        {
+            clicknum = 2;
+        }
+        else if (this.gameObject.name == "snareBtn" || this.gameObject.name == "hihat2Btn")
+        {
+            clicknum = 3;
+        }
+        else if (this.gameObject.name == "tom1Btn" || this.gameObject.name == "rideBtn")
+        {
+            clicknum = 4;
+        }
+        else if (this.gameObject.name == "tom2Btn")
+        {
+            clicknum = 5;
+        }
+        GetComponent<AudioSource>().clip = audioclip;
+        GetComponent<AudioSource>().PlayOneShot(audioclip);
         sr.sprite = next;
     }
 

@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class tutorial1_1 : MonoBehaviour {
 
     private GameObject note;
-    private GameObject name;
+    private GameObject n;
     float[] vy = new float[4] { 1.5f, 1.5f, 1.5f, 1.3f }; // crash, hihat1, hihat2, ride
     int i = 0;
     Vector3 v;
@@ -22,9 +22,9 @@ public class tutorial1_1 : MonoBehaviour {
             note = GameObject.FindGameObjectWithTag("Note");
         }
 
-        if (name == null)
+        if (n == null)
         {
-            name = GameObject.FindGameObjectWithTag("Name");
+            n = GameObject.FindGameObjectWithTag("Name");
         }
 
         v = note.transform.localPosition;
@@ -33,7 +33,7 @@ public class tutorial1_1 : MonoBehaviour {
         v.z = -1;
 
         sp = (Sprite)Resources.Load("Image/name" + (i+11), typeof(Sprite));
-        name.GetComponent<SpriteRenderer>().sprite = sp;
+        n.GetComponent<SpriteRenderer>().sprite = sp;
 
         note_sp = (Sprite)Resources.Load("Image/note" + (i + 11), typeof(Sprite));
         note.GetComponent<SpriteRenderer>().sprite = note_sp;
@@ -54,7 +54,7 @@ public class tutorial1_1 : MonoBehaviour {
             note_sp = (Sprite)Resources.Load("Image/note" + (i + 11), typeof(Sprite));
             note.GetComponent<SpriteRenderer>().sprite = note_sp;
             sp = (Sprite)Resources.Load("Image/name" + (i + 11), typeof(Sprite));
-            name.GetComponent<SpriteRenderer>().sprite = sp;
+            n.GetComponent<SpriteRenderer>().sprite = sp;
         }
         else
         {
@@ -64,7 +64,7 @@ public class tutorial1_1 : MonoBehaviour {
             note_sp = (Sprite)Resources.Load("Image/note" + (i + 11), typeof(Sprite));
             note.GetComponent<SpriteRenderer>().sprite = note_sp;
             sp = (Sprite)Resources.Load("Image/name" + (i + 11), typeof(Sprite));
-            name.GetComponent<SpriteRenderer>().sprite = sp;
+            n.GetComponent<SpriteRenderer>().sprite = sp;
         }
     }
 
@@ -78,7 +78,7 @@ public class tutorial1_1 : MonoBehaviour {
             note_sp = (Sprite)Resources.Load("Image/note" + (i + 11), typeof(Sprite));
             note.GetComponent<SpriteRenderer>().sprite = note_sp;
             sp = (Sprite)Resources.Load("Image/name" + (i + 11), typeof(Sprite));
-            name.GetComponent<SpriteRenderer>().sprite = sp;
+            n.GetComponent<SpriteRenderer>().sprite = sp;
         }
         else
         {
@@ -88,7 +88,7 @@ public class tutorial1_1 : MonoBehaviour {
             note_sp = (Sprite)Resources.Load("Image/note" + (i + 11), typeof(Sprite));
             note.GetComponent<SpriteRenderer>().sprite = note_sp;
             sp = (Sprite)Resources.Load("Image/name" + (i + 11), typeof(Sprite));
-            name.GetComponent<SpriteRenderer>().sprite = sp;
+            n.GetComponent<SpriteRenderer>().sprite = sp;
         }
     }
 }
