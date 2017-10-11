@@ -1,4 +1,8 @@
-package com.drum.pad.drumpad;
+package com.drum.pad.drumpad
+
+import android.app.Activity;
+
+];
 
 import android.app.Activity;
 import android.content.res.Configuration;
