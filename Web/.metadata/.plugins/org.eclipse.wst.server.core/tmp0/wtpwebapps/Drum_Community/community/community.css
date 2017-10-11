@@ -76,9 +76,11 @@ body{
  
 .board{
 	overflow: hidden;
-	float : left;
-	width : auto;
+	position: absolute;
+	float : right;
 	height : 80%;
+	width : 100%;
+	margin : 0 auto;
 }
 
 .board figure img{
@@ -88,6 +90,7 @@ body{
 
 .board figure{ 
   position : relative;
+  clear : both;
   width : 300%;
   margin : 0;
   top : 0;
@@ -96,16 +99,11 @@ body{
   animation : 20s slide ease-in-out infinite; 
 }
 
-.board text{
-	position : relative;
-	width: 300%;
-	margin: 0;
-	top: 0;
-	left: 0;
-}
-
 .footer{
+	position: fixed;
+	bottom : 0;
+	right : 0;
+	left : 0;
 	background-color : #FFBB00;
-	clear : both;
-	height : 7%;
+	height : 7.5%;
 }

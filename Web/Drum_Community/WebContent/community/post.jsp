@@ -15,12 +15,12 @@
 				자유게시판
 			</div>
 			<div class="header2">
-				<from name=form_login method=post>
+				<form name=form_login method=post>
 					ID <input type="text" name="id">
 					PW <input type="text" name="pw">
 					<input type="submit" name="login" value="로그인">
 					<button type="button" name="member" onclick = "location.href = 'member.html'">회원가입</button>
-				</from>
+				</form>
 			</div>
 			<div class="menu">
 					<li class="bar">│</li>
@@ -35,7 +35,7 @@
 					<li class="menuLink"><a href="main.html">홈</a></li>
 					<li class="bar">|</li>
 			</div>
-			<div class="board">
+			<div class="board" style="width: 50%; margin: 0 25%; position: absoulte; align: center;">
 				<%
 					Class.forName("com.mysql.jdbc.Driver");
 					String url = "jdbc:mysql://localhost/board";
@@ -51,6 +51,7 @@
 						ResultSet rs = stmt.executeQuery(sqlCount);
 						
 						if(rs.next()){
+							
 							total = rs.getInt(1);
 						}
 						rs.close();
@@ -118,8 +119,8 @@
 				  </tr>
 				</table>				
 			</div>
-			<div class="footer">
-			</div>
+		<div class="footer">
+		</div>
 		</div>
 </body>
 </html>

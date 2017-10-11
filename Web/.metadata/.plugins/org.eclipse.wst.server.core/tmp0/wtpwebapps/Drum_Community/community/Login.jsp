@@ -43,7 +43,8 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <style type="text/css">
 	div#table {
-		width: auto;
+		width: 80%;
+		height: 80%;
 		border-collapse: colapse;
 		text-align: center;
 	}
