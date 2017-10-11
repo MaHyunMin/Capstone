@@ -27,8 +27,6 @@
 					<li class="bar">│</li>
 					<li class="menuLink"><a href="share.jsp">공유하기</a></li>
 					<li class="bar">│</li>
-					<li class="menuLink"><a href="#">자랑하기</a></li>
-					<li class="bar">│</li>
 					<li class="menuLink"><a href="notice.jsp">공지사항</a></li>
 					<li class="bar">│</li>
 					<li class="menuLink"><a href="main.html">홈</a></li>
@@ -46,7 +44,7 @@
 						Connection conn = DriverManager.getConnection(url,id,pass);
 						Statement stmt = conn.createStatement();
 				
-						String sqlCount = "SELECT COUNT(*) FROM boardinfo";
+						String sqlCount = "SELECT COUNT(*) FROM boardinfo1";
 						ResultSet rs = stmt.executeQuery(sqlCount);
 						
 						if(rs.next()){
@@ -55,7 +53,7 @@
 						rs.close();
 						out.print("총 게시물 : " + total + "개");
 						
-						String sqlList = "SELECT NUM, USERNAME, TITLE, d_TIME, HIT from boardinfo order by NUM DESC";
+						String sqlList = "SELECT NUM, USERNAME, TITLE, d_TIME, HIT from boardinfo1 order by NUM DESC";
 						rs = stmt.executeQuery(sqlList);
 						
 				%>
@@ -90,7 +88,7 @@
 				<tr height="25" align="center">
 					<td>&nbsp;</td>
 					<td><%=idx %></td>
-					<td align="left"><a href="view.jsp?idx=<%=idx%>"><%=title %></td>
+					<td align="left"><a href="notice_view.jsp?idx=<%=idx%>"><%=title %></td>
 					<td align="center"><%=name %></td>
 					<td align="center"><%=time %></td>
 					<td align="center"><%=hit %></td>
@@ -113,7 +111,7 @@
 				<table width="100%" cellpadding="0" cellspacing="0" border="0">
 				  <tr><td colspan="4" height="5"></td></tr>
 				  <tr align="center">
-				   <td><input type=button value="글쓰기" OnClick = "window.location='write.jsp'"></td>
+				   <td><input type=button value="글쓰기" OnClick = "window.location='notice_write.jsp'"></td>
 				  </tr>
 				</table>			
 			</div>

@@ -62,15 +62,13 @@
 					<li class="bar">│</li>
 					<li class="menuLink"><a href="share.jsp">공유하기</a></li>
 					<li class="bar">│</li>
-					<li class="menuLink"><a href="#">자랑하기</a></li>
-					<li class="bar">│</li>
 					<li class="menuLink"><a href="notice.jsp">공지사항</a></li>
 					<li class="bar">│</li>
 					<li class="menuLink"><a href="main.html">홈</a></li>
 					<li class="bar">|</li>
 			</div>
-			<div class="board">
-				<table>
+			<div class="board" style="width: 50%; margin: 0 25%; position: absoulte; align: center;">
+				<table align = center>
 					<form name = writeform method = post action = "write_ok.jsp">
 					  <tr>
 					   <td>

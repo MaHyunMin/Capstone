@@ -28,8 +28,6 @@
 					<li class="bar">│</li>
 					<li class="menuLink"><a href="share.jsp">공유하기</a></li>
 					<li class="bar">│</li>
-					<li class="menuLink"><a href="#">자랑하기</a></li>
-					<li class="bar">│</li>
 					<li class="menuLink"><a href="notice.jsp">공지사항</a></li>
 					<li class="bar">│</li>
 					<li class="menuLink"><a href="main.html">홈</a></li>

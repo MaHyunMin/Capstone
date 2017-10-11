@@ -84,22 +84,22 @@
 		width: 50px;
 	}
 </style>
-<title>홈페이지 구현하기</title>
+<title>DrumPad Community</title>
 </head>
 <body>
 <form method = post>
 	<div id = wapper align = center>
 		<header>
-			<font size = 20pt> 게시판 목록</font> <hr>
+			<font size = 20pt>게시판 목록</font> <hr>
 		</header>
 		<table>
 			<tr>
-				<th> <font size = 3pt> 제목 </font> </th>
-				<td> </td>
+				<th><font size = 3pt>제목</font></th>
+				<td></td>
 			</tr>
 			<tr>
 				<td colspan = 2 align = center>
-				<input type = submit value = '게시글 작성'>
+				<input type = button value = '게시글 작성' onclick="location.href = 'post.jsp'">
 				</td>
 			</tr>
 		</table>
