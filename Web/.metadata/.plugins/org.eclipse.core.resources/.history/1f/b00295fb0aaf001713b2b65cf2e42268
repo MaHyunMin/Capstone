@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>DrumPad Community</title>
+<link rel="stylesheet" href="community.css" type="text/css"/>
+</head>
+<body>
+	<div class="wrapper">
+		<div class="header1">
+			DrumPad Community
+		</div>
+		<div class="header2">
+				<form name=form_login method=post>
+				ID <input type="text" name="id">
+				PW <input type="text" name="pw">
+				<!-- <input type="button" name="login" value="로그인" onclick = "location.href = 'Login.jsp'">
+				<button type="button" name="member" onclick = "location.href = 'member.html'">회원가입</button> -->
+				</form>
+		</div>
+		<div class="menu">
+				<li class="bar">│</li>
+				<li class="menuLink"><a href="post.jsp">자유게시판</a></li>
+				<li class="bar">│</li>
+				<li class="menuLink"><a href="share.jsp">공유하기</a></li>
+				<li class="bar">│</li>
+				<li class="menuLink"><a href="notice.jsp">공지사항</a></li>
+				<li class="bar">│</li>
+		</div>
+		<div class="board">
+			<figure>
+				<img src="main1-1.png">
+				<img src="main2-2.png">
+				<img src="main3-3.png">
+			</figure>
+		</div>
+		<div class="footer">
+		</div>
+	</div>
+</body>
+</html>

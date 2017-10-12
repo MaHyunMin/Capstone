@@ -14,12 +14,12 @@
 				공유하기
 			</div>
 			<div class="header2">
-				<form name=form_login method=post>
-					ID <input type="text" name="id">
-					PW <input type="text" name="pw">
-					<input type="submit" name="login" value="로그인">
-					<button type="button" name="member" onclick = "location.href = 'member.html'">회원가입</button>
-				</form>
+				<!-- <form name=form_login method=post>
+				ID <input type="text" name="id">
+				PW <input type="text" name="pw">
+				<input type="button" name="login" value="로그인" onclick = "location.href = 'Login.jsp'">
+				<button type="button" name="member" onclick = "location.href = 'member.html'">회원가입</button>
+				</form> -->
 			</div>
 			<div class="menu">
 					<li class="bar">│</li>
