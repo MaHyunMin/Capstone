@@ -15,20 +15,18 @@
 				자유게시판
 			</div>
 			<div class="header2">
-				<form name=form_login method=post>
-					ID <input type="text" name="id">
-					PW <input type="text" name="pw">
-					<input type="submit" name="login" value="로그인">
-					<button type="button" name="member" onclick = "location.href = 'member.html'">회원가입</button>
-				</form>
+				<!-- <form name=form_login method=post>
+				ID <input type="text" name="id">
+				PW <input type="text" name="pw">
+				<input type="button" name="login" value="로그인" onclick = "location.href = 'Login.jsp'">
+				<button type="button" name="member" onclick = "location.href = 'member.html'">회원가입</button>
+				</form> -->
 			</div>
 			<div class="menu">
 					<li class="bar">│</li>
 					<li class="menuLink"><a href="post.jsp">자유게시판</a></li>
 					<li class="bar">│</li>
 					<li class="menuLink"><a href="share.jsp">공유하기</a></li>
-					<li class="bar">│</li>
-					<li class="menuLink"><a href="#">자랑하기</a></li>
 					<li class="bar">│</li>
 					<li class="menuLink"><a href="notice.jsp">공지사항</a></li>
 					<li class="bar">│</li>

@@ -41,12 +41,12 @@
 				
 			</div>
 			<div class="header2">
-				<from name=form_login method=post>
-					ID <input type="text" name="id">
-					PW <input type="text" name="pw">
-					<input type="submit" name="login" value="로그인">
-					<button type="button" name="member" onclick = "location.href = 'member.html'">회원가입</button>
-				</from>
+				<!-- <form name=form_login method=post>
+				ID <input type="text" name="id">
+				PW <input type="text" name="pw">
+				<input type="button" name="login" value="로그인" onclick = "location.href = 'Login.jsp'">
+				<button type="button" name="member" onclick = "location.href = 'member.html'">회원가입</button>
+				</form> -->
 			</div>
 			<div class="menu">
 					<li class="bar">│</li>
@@ -54,15 +54,13 @@
 					<li class="bar">│</li>
 					<li class="menuLink"><a href="share.jsp">공유하기</a></li>
 					<li class="bar">│</li>
-					<li class="menuLink"><a href="#">자랑하기</a></li>
-					<li class="bar">│</li>
 					<li class="menuLink"><a href="notice.jsp">공지사항</a></li>
 					<li class="bar">│</li>
 					<li class="menuLink"><a href="main.html">홈</a></li>
 					<li class="bar">|</li>
 			</div>
-			<div class="board">
-				<table>
+			<div class="board" style="width: 50%; margin: 0 25%; position: absoulte; align: center;">
+				<table align = center>
 				 <tr>
 				  <td>
 				   <table width="100%" cellpadding="0" cellspacing="0" border="0">

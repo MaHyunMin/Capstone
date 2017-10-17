@@ -63,3 +63,25 @@
 6월 30, 2017 15:30:47.36 [12184:10820:0630/153047.365:ERROR:shader_disk_cache.cc(604)] Shader Cache Creation failed: -2
 6월 30, 2017 15:30:49.76 
 6월 30, 2017 15:30:49.76 KLIB_SelfTest return : KLR_OK
+
+8월 08, 2017 17:07:00.66 NEW SESSION
+8월 08, 2017 17:07:00.66 [15036:11536:0808/170700.660:ERROR:backend_impl.cc(1021)] Critical error found -8
+8월 08, 2017 17:07:01.03 [15036:11536:0808/170701.035:ERROR:backend_impl.cc(1021)] Critical error found -8
+8월 08, 2017 17:07:06.22 [15036:11536:0808/170706.222:ERROR:backend_impl.cc(1021)] Critical error found -8
+
+8월 21, 2017 11:11:00.97 NEW SESSION
+8월 21, 2017 11:11:00.97 [15668:19792:0821/111100.976:ERROR:gcm_channel_status_request.cc(127)] GCM channel request failed.
+8월 21, 2017 11:40:09.33 [15668:2240:0821/114009.329:ERROR:service_manager.cc(142)] Connection InterfaceProviderSpec prevented service: content_plugin from binding interface: memory_instrumentation::mojom::Coordinator exposed by: content_browser
+8월 21, 2017 11:44:41.64 [15668:2240:0821/114441.638:ERROR:service_manager.cc(142)] Connection InterfaceProviderSpec prevented service: content_plugin from binding interface: memory_instrumentation::mojom::Coordinator exposed by: content_browser
+
+10월 02, 2017 21:54:16.10 NEW SESSION
+10월 02, 2017 21:54:16.10 
+10월 02, 2017 21:54:16.10 KLIB_SelfTest return : KLR_OK
+
+10월 12, 2017 14:05:23.56 NEW SESSION
+10월 12, 2017 14:05:23.56 
+10월 12, 2017 14:05:23.57 KLIB_SelfTest return : KLR_OK
+10월 12, 2017 14:05:46.42 
+10월 12, 2017 14:05:46.42 KLIB_SelfTest return : KLR_OK
+10월 12, 2017 14:08:55.86 
+10월 12, 2017 14:08:55.86 KLIB_SelfTest return : KLR_OK
